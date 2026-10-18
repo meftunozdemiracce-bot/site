@@ -166,7 +166,7 @@ if(tab==='seo'){const q=D.seo;h=`<div class="panel"><b>WhatsApp iletişim</b>${F
 if(tab==='gorsel')h=`<div class="panel"><b>Alıntı bölümü arka planı</b><label>Dosya seç</label><input type="file" accept="image/*" onchange="up(this,'quote',1600)"></div><div class="panel"><b>Hero arka planı (villa)</b><label>Dosya seç</label><input type="file" accept="image/*" onchange="up(this,'hero',1600)">${D.img.hero?`<p><button class="btn sm danger" onclick="D.img.hero='';go()">Kaldır</button></p>`:''}</div><div class="panel"><b>Portre (arka planı şeffaf PNG veya WebP)</b><label>Dosya seç</label><input type="file" accept="image/*" onchange="up(this,'portrait',900)">${D.img.portrait?`<p><button class="btn sm danger" onclick="D.img.portrait='';go()">Kaldır</button></p>`:''}</div>`;
 return nav(['admin'])+`<main class="adm"><div class="wrap"><h1 class="serif" style="font-size:36px;margin:0 0 20px">Yönetim Paneli</h1><div class="tabs">${T.map(([k,l])=>`<button class="${tab===k?'on':''}" onclick="tab='${k}';go()">${l}</button>`).join('')}</div>${h}<div class="bar"><button class="btn gold" onclick="save()">Kaydet ve Yayınla</button><a class="btn" href="#/">Siteyi gör</a><button class="btn" onclick="lock()">Kilitle</button></div></div></main>`}
 function go(){root.innerHTML=view()+'<div id="toast"></div>'+fab();seo()}
-function toast(m){const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',3500)}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',8000)}
 document.addEventListener('input',ev=>{const p=ev.target.dataset&&ev.target.dataset.p;if(!p)return;const k=p.split('.');let o=D;for(let i=0;i<k.length-1;i++)o=o[k[i]];o[k[k.length-1]]=ev.target.value});
 document.addEventListener('change',ev=>{if(ev.target.tagName==='SELECT'&&ev.target.dataset.p)ev.target.dispatchEvent(new Event('input',{bubbles:true}))});
 const uid=()=>'x'+Math.random().toString(36).slice(2,8);
@@ -179,11 +179,14 @@ function ghSave(){const v=i=>document.getElementById(i).value.trim();const g={re
 async function ghPublish(html){const g=ghGet();if(!g.repo||!g.tok){tab='gh';go();toast('Önce GitHub bağlantısını girin');return}
 const api='https://api.github.com/repos/'+g.repo+'/contents/'+(g.path||'index.html').split('/').map(encodeURIComponent).join('/'),H={Authorization:'Bearer '+g.tok,Accept:'application/vnd.github+json'};
 toast('Yayınlanıyor...');
-const r=await fetch(api+'?ref='+encodeURIComponent(g.br||'main'),{headers:H});let sha;
-if(r.ok)sha=(await r.json()).sha;else if(r.status!==404){toast('GitHub hatası '+r.status+': depo, dal ve token bilgisini kontrol edin');return}
+const r=await fetch(api+'?ref='+encodeURIComponent(g.br||'main')+'&_='+Date.now(),{headers:H,cache:'no-store'});let sha;
+const em=async x=>{try{return (await x.clone().json()).message||''}catch(_){return ''}};
+if(r.ok)sha=(await r.json()).sha;else if(r.status!==404){toast('GitHub hatası '+r.status+' - '+(await em(r))+' (depo, dal, token izinlerini kontrol edin)');return}
 const bytes=new TextEncoder().encode(html);let bin='';for(let i=0;i<bytes.length;i+=8192)bin+=String.fromCharCode.apply(null,bytes.subarray(i,i+8192));
-const w=await fetch(api,{method:'PUT',headers:Object.assign({'Content-Type':'application/json'},H),body:JSON.stringify({message:'İçerik güncellemesi (yönetim paneli)',content:btoa(bin),sha:sha,branch:g.br||'main'})});
-toast(w.ok?'Yayınlandı. GitHub Pages 1-2 dakika içinde güncellenir.':'Kaydedilemedi, hata '+w.status)}
+const put=sh=>fetch(api,{method:'PUT',headers:Object.assign({'Content-Type':'application/json'},H),cache:'no-store',body:JSON.stringify({message:'İçerik güncellemesi (yönetim paneli)',content:btoa(bin),sha:sh,branch:g.br||'main'})});
+let w=await put(sha);
+if(w.status===409||w.status===422){const r2=await fetch(api+'?ref='+encodeURIComponent(g.br||'main')+'&_='+Date.now(),{headers:H,cache:'no-store'});if(r2.ok)w=await put((await r2.json()).sha)}
+toast(w.ok?'Yayınlandı. GitHub Pages 1-2 dakika içinde güncellenir.':'Kaydedilemedi, hata '+w.status+' - '+(await em(w)))}
 async function save(){
 if(!art&&!standalone){toast('Yayınlama yetkisi bulunamadı');return}
 try{seo(['']);const c=document.documentElement.cloneNode(true);c.querySelector('#root').innerHTML='';c.querySelectorAll('noscript').forEach(n=>n.remove());c.querySelector('body').insertAdjacentHTML('afterbegin','<noscript>'+stat()+'</noscript>');
