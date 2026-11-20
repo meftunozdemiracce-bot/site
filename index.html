@@ -77,74 +77,6 @@ textarea{min-height:90px;resize:vertical}textarea.big{min-height:260px}
 .danger{border-color:#8a4a4a;color:#e9a0a0}
 #toast{position:fixed;left:50%;transform:translateX(-50%);bottom:90px;background:#000;border:1px solid var(--gold);padding:10px 18px;border-radius:6px;z-index:30;display:none}
 @media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.portrait{display:none}.strip .wrap{grid-template-columns:1fr 1fr}.strip a:nth-child(3){border-left:0}.row{grid-template-columns:1fr}.hero{display:flex;flex-direction:column;min-height:0;padding:190px 0 0}.hero:before{display:none}.hero .wrap{order:1;padding-bottom:30px}.frame{order:2;position:relative;height:auto;width:100%;-webkit-mask-image:linear-gradient(180deg,transparent,#000 22%);mask-image:linear-gradient(180deg,transparent,#000 22%)}}
-
-/* ACCE Luxury Homes homepage */
-.lux-nav{position:absolute;padding:0 0 18px;background:linear-gradient(180deg,rgba(8,9,10,.82),transparent)}
-.lux-nav .wrap{padding-top:28px;align-items:center}
-.lux-brand{font:500 22px/1.1 'Playfair Display',Georgia,serif;letter-spacing:2px;color:#f5f0e8;white-space:nowrap}
-.lux-brand>span{color:#d0b17f}
-.lux-brand small{display:block;margin-top:7px;font:400 9px/1.3 Roboto,system-ui,sans-serif;letter-spacing:2px;color:#c7c0b5}
-.lux-nav .menu a{font-size:14px;border-color:rgba(220,205,180,.35);color:#eee8de}
-.lux-nav .menu a.on,.lux-nav .menu a:hover{color:#e0c394}
-.lux-hero{position:relative;min-height:760px;padding:190px 0 90px;overflow:hidden;background:#101112;display:flex;align-items:center}
-.lux-hero-bg{position:absolute;inset:0;background-position:center;background-size:cover;transform:scale(1.015)}
-.lux-hero-inner{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(260px,.88fr);align-items:center;gap:28px}
-.lux-copy{max-width:690px;padding:26px 0 18px}
-.lux-kicker,.lux-overline,.lux-section-tag{font-size:11px;letter-spacing:2.6px;color:#d5b985;font-weight:500}
-.lux-kicker{display:flex;align-items:center;gap:12px;margin-bottom:26px}
-.lux-kicker span{width:26px;height:1px;background:#c9a77c}
-.lux-overline{color:#c7c0b5;font-size:10px;letter-spacing:2px}
-.lux-copy h1{font:400 clamp(44px,6.1vw,76px)/1.08 'Playfair Display',Georgia,serif;max-width:720px;margin:18px 0 22px;color:#f6f1e9}
-.lux-copy h1 em,.lux-intro h2 em,.lux-heading h2 em,.lux-process h2 em,.lux-contact h2 em{font-style:normal;color:#d4b582}
-.lux-lead{max-width:570px;color:#ded8cf;font-size:17px;line-height:1.85}
-.lux-actions{margin-top:32px;gap:12px}
-.lux-actions .btn{padding:15px 20px;font-size:13px;letter-spacing:.2px}
-.lux-outline{border-color:rgba(226,205,170,.65);color:#f3ede3}
-.lux-location{margin-top:36px;color:#c6bdaF;font-size:10px;letter-spacing:3px}
-.lux-portrait{align-self:end;justify-self:center;max-width:390px;width:100%;height:500px;display:flex;align-items:end;justify-content:center;overflow:hidden}
-.lux-portrait img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;object-position:bottom;filter:drop-shadow(0 16px 32px rgba(0,0,0,.35))}
-.lux-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:3px;color:#c8bda9}
-.lux-scroll span{padding-left:10px;color:#d4b582}
-.lux-intro{padding:86px 0;background:#e9e4dc;color:#24211d}
-.lux-intro-grid{display:grid;grid-template-columns:.65fr 1.5fr 1fr;gap:28px;align-items:start}
-.lux-intro .lux-section-tag{color:#9b7b4f}
-.lux-intro h2,.lux-heading h2,.lux-process h2,.lux-contact h2{font:400 clamp(31px,4vw,48px)/1.2 'Playfair Display',Georgia,serif;margin:0}
-.lux-intro h2 em{color:#9b7b4f}
-.lux-intro-grid>p:last-child{margin:5px 0 0;color:#615a50;line-height:1.9;font-size:15px}
-.lux-services{padding:88px 0 96px;background:#141516}
-.lux-heading{margin-bottom:34px}
-.lux-heading h2{color:#f2ede5}
-.lux-service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.lux-service{position:relative;display:flex;flex-direction:column;min-height:310px;padding:30px 28px;border:1px solid #39342d;background:linear-gradient(145deg,#211f1c,#171819);transition:border-color .25s,transform .25s}
-.lux-service:hover{border-color:#c9a77c;transform:translateY(-4px)}
-.lux-number{font-size:11px;letter-spacing:2px;color:#c9a77c}
-.lux-service-mark{position:absolute;right:28px;top:25px;font:300 28px 'Playfair Display',serif;color:#c9a77c}
-.lux-service h3{font:400 25px/1.25 'Playfair Display',Georgia,serif;margin:42px 0 12px;color:#f3eee5}
-.lux-service p{font-size:14px;line-height:1.8;color:#bdb6ab;margin:0 0 26px}
-.lux-link,.lux-text-link{margin-top:auto;color:#d4b582;font-size:10px;letter-spacing:1.8px}
-.lux-process{padding:94px 0;background:#211f1c}
-.lux-process-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
-.lux-process h2{color:#f2ede5;margin:16px 0}
-.lux-process-lead{max-width:430px;color:#c4bdb2;line-height:1.85}
-.lux-text-link{display:inline-block;margin-top:22px}
-.lux-steps{border-top:1px solid #51483d}
-.lux-step{display:grid;grid-template-columns:54px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid #51483d}
-.lux-step>span{font:400 20px 'Playfair Display',serif;color:#d0b17f}
-.lux-step h3{margin:0 0 6px;font:400 21px 'Playfair Display',serif;color:#f3eee5}
-.lux-step p{margin:0;color:#bdb6ab;font-size:14px;line-height:1.7}
-.lux-journal{background:#151617}
-.lux-journal .lux-heading{margin-bottom:30px}
-.lux-journal .card{background:#211f1c;border-color:#39342d}
-.lux-journal .card:hover{border-color:#c9a77c}
-.lux-more{text-align:right;margin-top:24px}
-.lux-contact{padding:92px 0;text-align:center;background:linear-gradient(120deg,#28231c,#141516 62%,#252019);border-top:1px solid #51483d}
-.lux-contact-inner{max-width:760px}
-.lux-contact h2{margin:14px 0;color:#f5f0e8}
-.lux-contact p:not(.lux-section-tag){color:#c9c1b5;margin:16px 0 26px}
-.lux-contact .btn{display:inline-block}
-@media(max-width:900px){.lux-nav .wrap{align-items:flex-start}.lux-nav .menu{width:100%;padding-top:8px}.lux-nav .menu a{padding:4px 10px;font-size:12px}.lux-hero{min-height:700px;padding:190px 0 75px}.lux-hero-inner{grid-template-columns:1fr .65fr;gap:10px}.lux-portrait{height:400px}.lux-intro-grid{grid-template-columns:1fr 2fr}.lux-intro-grid>p:last-child{grid-column:2}.lux-process-grid{gap:42px}}
-@media(max-width:640px){.lux-nav .wrap{padding-top:20px}.lux-brand{font-size:19px}.lux-nav .menu{overflow-x:auto}.lux-nav .menu a{font-size:11px;padding:4px 9px}.lux-hero{min-height:760px;padding:175px 0 48px;align-items:flex-start}.lux-hero-bg{background-position:58% center}.lux-hero-inner{display:block}.lux-copy{padding:10px 0 0}.lux-kicker{font-size:9px;letter-spacing:1.8px;margin-bottom:20px}.lux-overline{font-size:9px;line-height:1.7}.lux-copy h1{font-size:clamp(42px,12vw,58px);max-width:560px}.lux-lead{font-size:15px;max-width:470px}.lux-actions{display:grid;grid-template-columns:1fr;max-width:360px}.lux-actions .btn{text-align:center}.lux-location{margin-top:24px;font-size:9px}.lux-portrait{position:absolute;right:-12px;bottom:-45px;width:48%;height:310px;opacity:.58;z-index:-1}.lux-scroll{display:none}.lux-intro{padding:62px 0}.lux-intro-grid{grid-template-columns:1fr;gap:14px}.lux-intro-grid>p:last-child{grid-column:auto}.lux-intro h2,.lux-heading h2,.lux-process h2,.lux-contact h2{font-size:34px}.lux-services,.lux-process{padding:66px 0}.lux-service-grid{grid-template-columns:1fr}.lux-service{min-height:250px;padding:25px}.lux-process-grid{grid-template-columns:1fr;gap:36px}.lux-step{grid-template-columns:42px 1fr}.lux-contact{padding:68px 0}.lux-more{text-align:left}}
-
 </style>
 <meta name="description" data-seo="1" content="İstanbul&#39;da satış, kiralama, gayrimenkul değerleme ve proje danışmanlığı. Meftun Özdemir ile mülkünüzü doğru fiyatla değerlendirin."><meta property="og:title" data-seo="1" content="Meftun Özdemir | Gayrimenkul Danışmanı - İstanbul"><meta property="og:description" data-seo="1" content="İstanbul&#39;da satış, kiralama, gayrimenkul değerleme ve proje danışmanlığı. Meftun Özdemir ile mülkünüzü doğru fiyatla değerlendirin."><meta property="og:type" data-seo="1" content="website"><meta property="og:locale" data-seo="1" content="tr_TR"><meta name="robots" data-seo="1" content="index,follow"><script id="ld" type="application/ld+json" data-seo="1">{"@context":"https://schema.org","@graph":[{"@type":["RealEstateAgent","LocalBusiness"],"@id":"https://meftunozdemir.com/#agent","name":"Meftun Özdemir","description":"İstanbul'da satış, kiralama, gayrimenkul değerleme ve proje danışmanlığı. Meftun Özdemir ile mülkünüzü doğru fiyatla değerlendirin.","url":"https://meftunozdemir.com/","telephone":"05360568250","email":"ozdemirmeftunist@gmail.com","areaServed":{"@type":"City","name":"İstanbul"},"address":{"@type":"PostalAddress","addressLocality":"İstanbul","addressCountry":"TR"}},{"@type":"WebSite","name":"Meftun Özdemir","url":"https://meftunozdemir.com/","inLanguage":"tr"}]}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J81CFENEC3"></script>
@@ -182,63 +114,11 @@ const lcard=l=>{const im=(l.imgs||[])[0],dk=l.kind==='proje'?'projeler':'gayrime
 function lb(s){const d=document.createElement('div');d.className='lbx';d.innerHTML='<img src="'+s+'" alt="">';d.onclick=()=>d.remove();document.body.appendChild(d)}
 function detail(l,k){const im=l.imgs||[];return nav([k])+`<main class="page"><div class="wrap"><article style="max-width:900px"><p class="cat"><a href="/">Ana Sayfa</a> › <a href="/${k}">${k==='projeler'?'Projeler':'Gayrimenkuller'}</a>${l.loc?' · '+e(l.loc):''}</p><h1>${e(l.title)}</h1><p class="lead" style="font-size:19px;color:var(--gold2)">${e(l.price)}</p>${im[0]?`<img src="${im[0].s}" alt="${e(im[0].a||l.title)}" style="display:block;width:100%;border-radius:8px;cursor:zoom-in;margin-bottom:10px" onclick="lb(this.src)">`:''}${im.length>1?`<div class="gal">${im.slice(1).map(x=>`<img src="${x.s}" alt="${e(x.a||l.title)}" loading="lazy" onclick="lb(this.src)">`).join('')}</div>`:''}<div class="prose">${prose(l.body||l.desc)}</div>${l.video?vbox(l)+(l.vdesc?`<p style="color:var(--mu)">${e(l.vdesc)}</p>`:''):''}${waBtn('Merhaba, "'+l.title+'" projesi hakkında bilgi almak istiyorum.')}${l.note?`<p style="color:var(--mu);font-size:13px">${e(l.note)}</p>`:''}<a class="btn sm" href="/${k}">← Tümü</a></article></div></main>`+foot()}
 function feat(){const l=D.listings.find(x=>x.kind==='proje'&&x.imgs&&x.imgs[0]);if(!l)return '';return `<section class="blk"><div class="wrap"><h2 class="t">Öne Çıkan Proje</h2><div class="feat"><a href="/projeler/${l.id}"><img src="${l.imgs[0].s}" alt="${e(l.imgs[0].a||l.title)}"></a><div class="fi"><span class="cat">${e(l.loc||'')}</span><h3 class="serif" style="font-size:30px;font-weight:400;margin:8px 0">${e(l.title)}</h3><p style="color:var(--mu)">${e(l.desc)}</p><p style="color:var(--gold2)">${e(l.price)}</p><div class="btns"><a class="btn gold" href="/projeler/${l.id}">Projeyi İncele →</a></div></div></div></div></section>`}
-function home(){
-const s=D.site;
-const homeNav=`<nav class="top lux-nav"><div class="wrap"><a href="/" class="lux-brand"><span>ACCE</span> LUXURY HOMES<small>MEFTUN ÖZDEMİR · GAYRİMENKUL DANIŞMANLIĞI</small></a><div class="menu">${NAV.map(([h,l])=>`<a href="/${h}" class="${h===''?'on':''}">${l}</a>`).join('')}</div></div></nav>`;
-const heroImg=D.img.hero||'';
-const portrait=D.img.portrait?`<div class="lux-portrait"><img src="${D.img.portrait}" alt="Meftun Özdemir - ACCE Luxury Homes"></div>`:'';
-const recent=[...D.articles].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
-return homeNav+`
-<header class="lux-hero">
-  <div class="lux-hero-bg" style="background-image:linear-gradient(90deg,rgba(12,13,14,.96) 0%,rgba(12,13,14,.82) 48%,rgba(12,13,14,.28) 100%),url('${e(heroImg)}')"></div>
-  <div class="wrap lux-hero-inner">
-    <div class="lux-copy">
-      <div class="lux-kicker"><span></span> ACCE LUXURY HOMES <span></span> İSTANBUL</div>
-      <p class="lux-overline">GAYRİMENKUL YATIRIMI · PROJE GELİŞTİRME · DANIŞMANLIK</p>
-      <h1>Gayrimenkulünüzün <em>potansiyelini</em> geleceğe taşıyın.</h1>
-      <p class="lux-lead">Yatırım fırsatlarını, gayrimenkulünüzün potansiyelini ve kat karşılığı proje geliştirme seçeneklerini birlikte değerlendirelim.</p>
-      <div class="btns lux-actions">
-        <a class="btn gold" ${lk('Merhaba, gayrimenkulümün potansiyelini değerlendirmek istiyorum.','/iletisim')}>Mülküm İçin Görüşme İstiyorum <span>↗</span></a>
-        <a class="btn lux-outline" href="/gayrimenkuller">Gayrimenkulleri Keşfet <span>→</span></a>
-      </div>
-      <div class="lux-location">KAVACIK · BEYKOZ · İSTANBUL</div>
-    </div>
-    ${portrait}
-  </div>
-  <div class="lux-scroll">KEŞFEDİN <span>↓</span></div>
-</header>
-<section class="lux-intro">
-  <div class="wrap lux-intro-grid">
-    <p class="lux-section-tag">YAKLAŞIMIMIZ</p>
-    <h2>Doğru analiz. <em>Güvenilir iş birliği.</em><br>Uzun vadeli değer.</h2>
-    <p>Her gayrimenkulün kendine özgü bir hikâyesi ve değerlendirilmesi gereken bir potansiyeli vardır. Amacımız, mülk sahipleri ve yatırımcılar için doğru seçenekleri görünür kılmak.</p>
-  </div>
-</section>
-<section class="lux-services">
-  <div class="wrap">
-    <div class="lux-heading"><p class="lux-section-tag">HİZMET ALANLARIMIZ</p><h2>Gayrimenkulde <em>doğru fırsata</em> odaklanın.</h2></div>
-    <div class="lux-service-grid">
-      <a class="lux-service" href="/iletisim"><span class="lux-number">01</span><span class="lux-service-mark">↗</span><h3>Yatırım & Gayrimenkul Danışmanlığı</h3><p>Alım, satım ve kiralama süreçlerinde mülkün konumunu, özelliklerini ve piyasa koşullarını birlikte değerlendiriyoruz.</p><span class="lux-link">BİZİMLE GÖRÜŞÜN →</span></a>
-      <a class="lux-service" href="/projeler"><span class="lux-number">02</span><span class="lux-service-mark">⌂</span><h3>Arsa & Bina Proje Geliştirme</h3><p>Mevcut binaların ve arsaların geliştirme potansiyelini inceliyor, kat karşılığı proje seçeneklerinin değerlendirilmesine aracılık ediyoruz.</p><span class="lux-link">PROJELERİ İNCELEYİN →</span></a>
-      <a class="lux-service" href="/gayrimenkuller"><span class="lux-number">03</span><span class="lux-service-mark">◇</span><h3>Seçkin Gayrimenkuller</h3><p>Yaşam ve yatırım beklentilerinize uygun konut, villa, arsa ve proje alternatiflerini keşfetmenize yardımcı oluyoruz.</p><span class="lux-link">PORTFÖYÜ KEŞFEDİN →</span></a>
-    </div>
-  </div>
-</section>
-<section class="lux-process">
-  <div class="wrap lux-process-grid">
-    <div><p class="lux-section-tag">ÇALIŞMA MODELİMİZ</p><h2>Fırsatı görür,<br><em>değeri birlikte</em><br>oluştururuz.</h2><p class="lux-process-lead">Her adımda şeffaf iletişim ve mülkün gerçek koşullarına dayanan bir değerlendirme.</p><a class="lux-text-link" href="/hakkimda">MEFTUN ÖZDEMİR HAKKINDA →</a></div>
-    <div class="lux-steps">
-      <div class="lux-step"><span>01</span><div><h3>Tanışma & Ön Değerlendirme</h3><p>Mülkünüzü, beklentilerinizi ve hedeflerinizi dinliyoruz.</p></div></div>
-      <div class="lux-step"><span>02</span><div><h3>Potansiyel & Seçenek Analizi</h3><p>Konum, mülkiyet, mevcut durum ve geliştirme seçeneklerini ele alıyoruz.</p></div></div>
-      <div class="lux-step"><span>03</span><div><h3>Doğru İş Birliği</h3><p>Uygun fırsatlarda sizi ilgili alıcı, yatırımcı veya müteahhit iş ortaklarıyla buluşturuyoruz.</p></div></div>
-    </div>
-  </div>
-</section>
-${feat()}
-<section class="blk lux-journal"><div class="wrap"><div class="lux-heading"><p class="lux-section-tag">BİLGİ & GÜNCEL BAKIŞ</p><h2>Gayrimenkul dünyasından <em>notlar.</em></h2></div><div class="grid">${recent.map(card).join('')}</div><div class="lux-more"><a class="lux-text-link" href="/rehber">TÜM REHBER YAZILARINI GÖRÜN →</a></div></div></section>
-<section class="lux-contact"><div class="wrap lux-contact-inner"><p class="lux-section-tag">İLK ADIMI ATIN</p><h2>Gayrimenkulünüz için<br><em>yeni bir perspektif.</em></h2><p>Arsanızın, binanızın veya yatırımınızın potansiyelini konuşalım.</p><a class="btn gold" href="/iletisim">Bizimle İletişime Geçin ↗</a></div></section>
-`+foot()
-}
+function home(){const s=D.site,bg=D.img.hero?`background-image:url(${D.img.hero})`:'',qb=D.img.quote?`background-image:linear-gradient(rgba(21,21,21,.78),rgba(21,21,21,.92)),url(${D.img.quote});background-size:cover;background-position:center`:'';
+return nav(['']) + `<header class="hero"><div class="frame"><div class="vbg" role="img" aria-label="${e(D.seo.city)} modern villa" style="${bg}"></div>${D.img.portrait?`<img class="pt" src="${D.img.portrait}" alt="${e(D.seo.person)} - ${e(D.site.role)}">`:''}</div><div class="wrap"><div><div class="eyebrow">${e(s.eyebrow)}</div><h1>${e(s.title)}</h1><p class="lead">${e(s.sub)}</p><div class="btns"><a class="btn gold" ${lk('Merhaba, gayrimenkulümü değerlendirmek istiyorum.','/iletisim')}>${e(s.btn1)} →</a><a class="btn" href="/gayrimenkuller">${e(s.btn2)} →</a></div></div></div></header>
+<div class="strip"><div class="wrap">${['iletisim','gayrimenkuller','projeler','rehber'].map((h,i)=>`<a href="/${h}">${e(s.strip[i])}</a>`).join('')}</div></div>
+<div class="quote" style="${qb}"><h2>${e(s.qTitle)}</h2><p>${e(s.qSub)}</p><div class="sig">${e(s.sig)}</div></div>
+${feat()}<section class="blk"><div class="wrap"><h2 class="t">Rehberden Son Yazılar</h2><div class="grid">${[...D.articles].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3).map(card).join('')}</div></div></section>`+foot()}
 function list(title,items,fn){return nav([location.pathname.split('/')[1]||'']).replace('','')+`<main class="page"><div class="wrap"><h1 class="serif">${title}</h1><div class="grid">${items.map(fn).join('')||'<p>Henüz içerik yok.</p>'}</div></div></main>`+foot()}
 function view(){const r=route(),k=r[0];
 if(k==='admin')return admin();
